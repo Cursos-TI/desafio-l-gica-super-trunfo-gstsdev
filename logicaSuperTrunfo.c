@@ -194,12 +194,13 @@ int main() {
 
     int opcaoAtributo;
 
-    printf("==== Escolha um atributo para comparação das cartas ====\n");
+    printf("==== Atributos de comparação das cartas ====\n");
     printf("1. População\n");
     printf("2. Área\n");
     printf("3. PIB\n");
     printf("4. Número de pontos turísticos\n");
     printf("5. Densidade demográfica\n");
+    printf("Escolha um atributo: ");
     scanf("%d", &opcaoAtributo);
 
 
