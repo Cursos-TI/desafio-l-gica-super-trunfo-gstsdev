@@ -192,27 +192,97 @@ int main() {
     // Desenvolva a lógica de comparação entre duas cartas.
     // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
 
-    int cidadeVencedora;
+    int opcaoAtributo;
 
-    if (carta1Populacao > carta2Populacao) {
-        cidadeVencedora = 1;
-    } else {
-        cidadeVencedora = 2;
-    }
+    printf("==== Escolha um atributo para comparação das cartas ====\n");
+    printf("1. População\n");
+    printf("2. Área\n");
+    printf("3. PIB\n");
+    printf("4. Número de pontos turísticos\n");
+    printf("5. Densidade demográfica\n");
+    scanf("%d", &opcaoAtributo);
+
 
     // Exibição dos Resultados:
     // Após realizar as comparações, exiba os resultados para o usuário.
     // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
+
+    switch (opcaoAtributo) {
+        case 1:
+            printf("\n=== Comparação de cartas (atributo: População) ===\n");
     
-    printf("\n=== Comparação de cartas (atributo: População) ===\n");
+            if (carta1Populacao > carta2Populacao) {
+                printf("A carta 1 (%s) venceu!\n", carta1Cidade);
+            } else if (carta1Populacao < carta2Populacao) {
+                printf("A carta 2 (%s) venceu!\n", carta2Cidade);
+            } else {
+                printf("Empate!\n");
+            }
+            
+            printf("====================================================\n");
+
+            break;
+        case 2:
+            printf("\n=== Comparação de cartas (atributo: Área) ===\n");
     
-    if (cidadeVencedora == 1) {
-        printf("A carta 1 (%s) venceu!\n", carta1Cidade);
-    } else {
-        printf("A carta 2 (%s) venceu!\n", carta2Cidade);
+            if (carta1AreaCidade > carta2AreaCidade) {
+                printf("A carta 1 (%s) venceu!\n", carta1Cidade);
+            } else if (carta1AreaCidade < carta2AreaCidade) {
+                printf("A carta 2 (%s) venceu!\n", carta2Cidade);
+            } else {
+                printf("Empate!\n");
+            }
+            
+            printf("====================================================\n");
+
+            break;
+        case 3:
+            printf("\n=== Comparação de cartas (atributo: PIB) ===\n");
+    
+            if (carta1PIB > carta2PIB) {
+                printf("A carta 1 (%s) venceu!\n", carta1Cidade);
+            } else if (carta1PIB < carta2PIB) {
+                printf("A carta 2 (%s) venceu!\n", carta2Cidade);
+            } else {
+                printf("Empate!\n");
+            }
+            
+            printf("====================================================\n");
+
+            break;
+        case 4:
+            printf("\n=== Comparação de cartas (atributo: Número de pontos turísticos) ===\n");
+    
+            if (carta1NumeroPontosTuristicos > carta2NumeroPontosTuristicos) {
+                printf("A carta 1 (%s) venceu!\n", carta1Cidade);
+            } else if (carta1NumeroPontosTuristicos < carta2NumeroPontosTuristicos) {
+                printf("A carta 2 (%s) venceu!\n", carta2Cidade);
+            } else {
+                printf("Empate!\n");
+            }
+            
+            printf("====================================================\n");
+
+            break;
+        case 5:
+            printf("\n=== Comparação de cartas (atributo: Densidade demográfica) ===\n");
+    
+            // Densidade população é inversa: a carta com o menor valor, vence.
+
+            if (carta1DensidadePopulacional < carta2DensidadePopulacional) {
+                printf("A carta 1 (%s) venceu!\n", carta1Cidade);
+            } else if (carta1DensidadePopulacional > carta2DensidadePopulacional) {
+                printf("A carta 2 (%s) venceu!\n", carta2Cidade);
+            } else {
+                printf("Empate!\n");
+            }
+            
+            printf("====================================================\n");
+
+            break;
+        default:
+            printf("Opção inválida\n");
     }
     
-    printf("====================================================\n");
-
     return 0;
 }
