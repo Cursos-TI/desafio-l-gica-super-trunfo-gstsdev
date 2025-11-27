@@ -35,8 +35,6 @@ int main() {
     // PIB per capita: a razão entre a o PIB da cidade e sua população.
     // Indica a riqueza média por pessoa.
     float carta1PIBPerCapita;
-    // Super Poder
-    float carta1SuperPoder;
 
     // Dados da Carta 2
     
@@ -63,8 +61,6 @@ int main() {
     // PIB per capita: a razão entre a o PIB da cidade e sua população.
     // Indica a riqueza média por pessoa.
     float carta2PIBPerCapita;
-    // Super Poder
-    float carta2SuperPoder;
     
     // Cadastro das Cartas:
     
@@ -113,19 +109,6 @@ int main() {
     // casting do valor da populção para `float`.
     carta1PIBPerCapita = carta1PIB * 1000000000 / (float) carta1Populacao;
 
-    // Calcula-se o "Super Poder" somando todos os atributos numéricos
-    // (população, área, PIB, número de pontos turísticos, PIB per capita
-    // e o inverso da densidade populacional – quanto menor a densidade,
-    // maior o "poder").
-    carta1SuperPoder = (
-        (float) carta1Populacao
-        + carta1AreaCidade
-        + carta1PIB
-        + carta1NumeroPontosTuristicos
-        + carta1PIBPerCapita
-        + (1 / carta1DensidadePopulacional)
-    );
-
     printf("\n=================\n");
 
     // Insere os dados da carta 2
@@ -172,19 +155,6 @@ int main() {
     // para usar a mesma unidade que o número de habitantes. Realizamos o 
     // casting do valor da populção para `float`.
     carta2PIBPerCapita = carta2PIB * 1000000000 / (float) carta2Populacao;
-
-    // Calcula-se o "Super Poder" somando todos os atributos numéricos
-    // (população, área, PIB, número de pontos turísticos, PIB per capita
-    // e o inverso da densidade populacional – quanto menor a densidade,
-    // maior o "poder").
-    carta2SuperPoder = (
-        (float) carta2Populacao
-        + carta2AreaCidade
-        + carta2PIB
-        + carta2NumeroPontosTuristicos
-        + carta2PIBPerCapita
-        + (1 / carta2DensidadePopulacional)
-    );
 
     printf("\n=================\n");
 
